@@ -3,49 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <title>Justin Hwang</title>
-  <link href="https://fonts.googleapis.com/css2?family=CMU+Serif&display=swap" rel="stylesheet">
+
+  <!-- LaTeX-style font -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bitmaks/cm-web-fonts@latest/fonts.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- MathJax -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <style>
-    body {
-      font-family: 'CMU Serif', serif;
-      background-color: #ffffff;
-      color: #000000;
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-      line-height: 1.6;
-    }
-    h1, h2, h3 {
-      text-align: center;
-      font-weight: normal;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    hr {
-      margin: 2rem 0;
-    }
-    code {
-      background: #f0f0f0;
-      padding: 0.2em 0.4em;
-      font-family: monospace;
-    }
-  </style>
 </head>
 <body>
-  <h1>Justin Hwang</h1>
-  <h3>Computer Science & Mathematics @ UChicago</h3>
-  <hr>
+  <header>
+    <nav class="centered-nav">
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">Research</a>
+      <a href="#">CV</a>
+    </nav>
+    <hr>
+  </header>  
 
-  <p>Welcome to my personal website! I enjoy working at the intersection of theoretical computer science, mathematics, and machine learning.</p>
+  <main>
+    <h1><b>Justin Hwang</b></h1>
+    <h3>B.A., Mathematics</h3>
+    <h3>University of Chicago</h3>
 
-  <p>Here's an example of LaTeX-style math:</p>
-  <p>\[
-    \lim_{x \to 0} \frac{\sin x}{x} = 1
-  \]</p>
+    <hr>
 
-  <p><a href="resume.pdf">Download my résumé</a></p>
+    <p>
+      Welcome to my personal website!
+    </p>
+    <p>
+      I'm a math student based in Closter, New Jersey.
+    </p>
+    <p>Here's an example of $\LaTeX$-style math:</p>
+    <p>
+      \[1+1=2\]
+      \[
+      \lim_{n \to \infty} \left( 1+\frac{1}{n} \right)^n = e
+    \]
+    \[
+    \oint_{\partial S} \mathbf{F} \cdot d\mathbf{r} = \iint_{S} (\nabla \times \mathbf{F}) \cdot d\mathbf{S}
+    \]</p>
+
+    <p><a href="resume.pdf">Download my résumé</a></p>
+  </main>
 </body>
 </html>
